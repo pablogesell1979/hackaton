@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Mini Hackatón de Diseño Integral</title>
+<title>Hackatón EXPERIENCIA ARQ-DIS</title>
 <style>
 :root{
   --ink:#0b1020;--paper:#f7f5ef;--white:#ffffff;--blue:#3156ff;--violet:#7a52ff;
@@ -18,7 +18,7 @@ body{display:flex;align-items:center;justify-content:center}
 .screen.active{display:flex}
 .screen.stage{align-items:stretch}
 
-/* COVER: imagen plena, sin velos ni opacidad */
+/* COVER */
 .cover{align-items:flex-end;justify-content:flex-start;background:#101729 center/cover no-repeat url('portada.jpg');padding:0}
 .cover::after{display:none}
 .cover-content{position:absolute;left:3.2%;bottom:8.2%;z-index:2}
@@ -30,22 +30,22 @@ body{display:flex;align-items:center;justify-content:center}
 .main-card,.side-card{border:1px solid rgba(255,255,255,.11);border-radius:2vw;background:rgba(17,25,45,.78);box-shadow:0 2vw 5vw rgba(0,0,0,.22);padding:3vw;backdrop-filter:blur(10px)}
 .main-card{display:flex;flex-direction:column;justify-content:center}
 .stage-label{font-size:.95vw;font-weight:900;letter-spacing:.15em;text-transform:uppercase;color:var(--aqua)}
-h2{font-size:4.25vw;line-height:.95;letter-spacing:-.05em;margin:.5vw 0 1.35vw;font-weight:950}
-.lead{font-size:1.43vw;line-height:1.45;margin:0;color:#e3e9f4;max-width:57vw}
-.examples{margin-top:1.55vw;display:flex;flex-wrap:wrap;gap:.65vw}
-.example{font-size:.9vw;font-weight:800;padding:.55vw .78vw;border-radius:999px;background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.11)}
+h2{font-size:3.8vw;line-height:.95;letter-spacing:-.05em;margin:.5vw 0 1.2vw;font-weight:950}
+.lead{font-size:1.35vw;line-height:1.45;margin:0;color:#e3e9f4;max-width:57vw}
+.examples{margin-top:1.3vw;display:flex;flex-wrap:wrap;gap:.6vw}
+.example{font-size:.88vw;font-weight:800;padding:.55vw .85vw;border-radius:999px;background:rgba(66,228,196,.12);border:1px solid rgba(66,228,196,.35);color:#d2fbf3}
 .side-title{font-size:1vw;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);font-weight:900;margin-bottom:1vw}
 .rules{display:grid;gap:.8vw}
-.rule{padding:1vw 1.08vw;border:1px solid rgba(255,255,255,.09);border-radius:1vw;background:rgba(255,255,255,.04);font-size:1.05vw;line-height:1.38;color:#e6ebf4}
+.rule{padding:1vw 1.08vw;border:1px solid rgba(255,255,255,.09);border-radius:1vw;background:rgba(255,255,255,.04);font-size:1.02vw;line-height:1.38;color:#e6ebf4}
 .rule b{color:var(--aqua)}
 .format-badge{display:inline-flex;align-items:center;gap:.45vw;padding:.5vw .75vw;border-radius:999px;background:rgba(49,86,255,.16);border:1px solid rgba(91,117,255,.45);font-size:.88vw;font-weight:900;margin-top:1vw}
 .qr-box{margin-top:1vw;display:flex;align-items:center;justify-content:center;padding:.8vw;border:1px solid rgba(255,255,255,.12);border-radius:1.1vw;background:rgba(255,255,255,.045)}
-.qr-box img{display:block;width:9vw;height:9vw;object-fit:contain;background:#fff;padding:.3vw;border-radius:.55vw}
+.qr-box img{display:block;width:8.5vw;height:8.5vw;object-fit:contain;background:#fff;padding:.3vw;border-radius:.55vw}
 .qr-caption{margin-top:.55vw;text-align:center;font-size:.82vw;line-height:1.25;color:#dce4f2;font-weight:800}
 
-.timer-row{display:flex;align-items:flex-end;justify-content:space-between;gap:2vw;margin-top:2.15vw}
+.timer-row{display:flex;align-items:flex-end;justify-content:space-between;gap:2vw;margin-top:2vw}
 .timer-wrap{display:flex;align-items:flex-end;gap:1.1vw}
-.timer{font-size:5.4vw;line-height:.82;font-weight:950;letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+.timer{font-size:5.2vw;line-height:.82;font-weight:950;letter-spacing:-.05em;font-variant-numeric:tabular-nums}
 .timer-label{font-size:.8vw;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:800;margin-bottom:.35vw}
 .timer-controls{display:flex;gap:.5vw;flex-wrap:wrap;justify-content:flex-end}
 .micro-btn{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.055);color:#e8edf7;padding:.55vw .72vw;border-radius:.75vw;cursor:pointer;font-weight:800;font-size:.8vw}
@@ -58,16 +58,16 @@ h2{font-size:4.25vw;line-height:.95;letter-spacing:-.05em;margin:.5vw 0 1.35vw;f
 
 /* SURPRISE CARD */
 .surprise-screen{align-items:center;justify-content:center;background:radial-gradient(circle at 50% 40%,rgba(122,82,255,.30),transparent 35%),linear-gradient(135deg,#080b14,#10172a)}
-.flip-wrap{width:64%;height:66%;perspective:1800px}
+.flip-wrap{width:68%;height:70%;perspective:1800px}
 .flip-card{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform 1s cubic-bezier(.2,.72,.1,1)}
 .flip-card.flipped{transform:rotateY(180deg)}
 .card-face{position:absolute;inset:0;border-radius:2.3vw;backface-visibility:hidden;overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:0 3vw 8vw rgba(0,0,0,.38);border:1px solid rgba(255,255,255,.14)}
 .card-back{background:repeating-linear-gradient(135deg,#1b2d55 0,#1b2d55 1.2vw,#142342 1.2vw,#142342 2.4vw)}
 .card-back::after{content:"?";font-size:16vw;font-weight:950;color:rgba(255,255,255,.12);transform:rotate(-8deg)}
-.card-front{transform:rotateY(180deg);background:linear-gradient(145deg,#f9f7f1,#e9e5d8);color:var(--ink);padding:4vw;text-align:center}
-.card-front .tag{display:inline-block;background:var(--ink);color:white;border-radius:999px;padding:.52vw .88vw;font-size:.9vw;font-weight:900;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1vw}
-.card-front h2{font-size:3.6vw;margin:.1vw 0 1.15vw;color:#101729}
-.card-front p{font-size:1.38vw;line-height:1.5;margin:0 auto;max-width:46vw;color:#242b3b}
+.card-front{transform:rotateY(180deg);background:linear-gradient(145deg,#f9f7f1,#e9e5d8);color:var(--ink);padding:3.5vw;text-align:center}
+.card-front .tag{display:inline-block;background:var(--ink);color:white;border-radius:999px;padding:.52vw .88vw;font-size:.88vw;font-weight:900;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.8vw}
+.card-front h2{font-size:3.2vw;margin:.1vw 0 .9vw;color:#101729}
+.card-front p{font-size:1.3vw;line-height:1.48;margin:0 auto;max-width:52vw;color:#242b3b}
 .card-front strong{color:#3156ff}
 
 /* PITCH */
@@ -79,8 +79,8 @@ h2{font-size:4.25vw;line-height:.95;letter-spacing:-.05em;margin:.5vw 0 1.35vw;f
 .closing{align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 50% 35%,rgba(255,216,77,.16),transparent 30%),radial-gradient(circle at 80% 10%,rgba(122,82,255,.25),transparent 28%),linear-gradient(135deg,#0b1020,#090d18 76%)}
 .closing-inner{max-width:72%;display:flex;flex-direction:column;align-items:center}
 .trophy{font-size:7vw;filter:drop-shadow(0 1vw 2vw rgba(0,0,0,.3))}
-.closing h2{font-size:5.1vw;margin:.3vw 0 1vw}
-.closing p{font-size:1.8vw;line-height:1.4;color:#e6ebf4;margin:0}
+.closing h2{font-size:4.8vw;margin:.3vw 0 1vw}
+.closing p{font-size:1.7vw;line-height:1.4;color:#e6ebf4;margin:0}
 .deliberando{margin-top:1.6vw;padding:.8vw 1.25vw;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.11);font-size:1vw;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow)}
 
 /* NAV */
@@ -103,121 +103,136 @@ h2{font-size:4.25vw;line-height:.95;letter-spacing:-.05em;margin:.5vw 0 1.35vw;f
 <div id="frame">
   <button class="fullscreen" id="fullscreenBtn">⛶ Pantalla completa</button>
 
+  <!-- COVER -->
   <section class="screen cover active" data-index="0" data-kind="cover">
-    <div class="cover-content"><div class="kicker">Buenos Aires + Rosario</div></div>
+    <div class="cover-content">
+      <div class="kicker">EXPERIENCIA ARQ-DIS · HACKATON</div>
+    </div>
   </section>
 
-  <section class="screen stage" data-index="1" data-kind="timed" data-duration="600" data-end="PREPARADOS">
+  <!-- ETAPA 1 -->
+  <section class="screen stage" data-index="1" data-kind="timed" data-duration="600" data-end="¡ELEGIDO!">
     <div class="stage-inner">
       <div class="main-card">
-        <div class="stage-label">Etapa 1 · Formación de equipos</div>
-        <h2>Conozcan a su equipo</h2>
-        <p class="lead">Armen grupos mixtos entre Buenos Aires y Rosario. Preséntense brevemente, identifiquen fortalezas y empiecen a trabajar como un solo equipo.</p>
+        <div class="stage-label">Etapa 1 · Formación e Ideación · 10 min</div>
+        <h2>Conozcan a su equipo e elijan su desafío</h2>
+        <p class="lead">El equipo se presenta entre sí y se conoce. Elijan una idea inicial sobre la cual van a trabajar para <b>"Reinventar el micro-espacio de encuentro"</b>.</p>
+        <div class="examples">
+          <span class="example">1. Punto de encuentro / descanso en escuela o club</span>
+          <span class="example">2. Parada de colectivo / refugio urbano interactivo</span>
+          <span class="example">3. Módulo modular para eventos o ferias escolares</span>
+          <span class="example">4. "Aula del futuro" / espacio de estudio flexible</span>
+        </div>
         <div class="timer-row">
           <div class="timer-wrap"><div class="timer" data-timer>10:00</div><div class="timer-label">Tiempo de etapa</div></div>
           <div class="timer-controls"><button class="micro-btn" data-action="pause">❚❚ Pausa</button><button class="micro-btn finish" data-action="finish">⏭ Finalizar</button><button class="micro-btn" data-action="reset">↺ Reiniciar</button></div>
         </div>
       </div>
       <aside class="side-card"><div class="side-title">Pistas</div><div class="rules">
-        <div class="rule"><b>1.</b> No hace falta definir roles rígidos.</div>
-        <div class="rule"><b>2.</b> Detecten rápido quién puede aportar en ideación, visualización, argumentación y presentación.</div>
-        <div class="rule"><b>3.</b> El objetivo es entrar en ritmo, no resolver todavía el desafío.</div>
+        <div class="rule"><b>1.</b> Preséntense e identifiquen qué puede aportar cada integrante (dibujo, ideas, organización, presentación).</div>
+        <div class="rule"><b>2.</b> Elijan rápidamente uno de los 4 micro-espacios.</div>
+        <div class="rule"><b>3.</b> Imaginen quiénes lo usarán y qué problema actual tiene ese espacio.</div>
       </div></aside>
     </div>
-    <div class="end-message">PREPARADOS</div>
+    <div class="end-message">¡ELEGIDO!</div>
   </section>
 
+  <!-- ETAPA 2 -->
   <section class="screen stage" data-index="2" data-kind="timed" data-duration="900" data-end="¡ATENCIÓN!">
     <div class="stage-inner">
       <div class="main-card">
-        <div class="stage-label">Etapa 2 · 15 minutos</div>
-        <h2>Rediseñen un objeto cotidiano</h2>
-        <p class="lead">Elijan un objeto cotidiano y rediseñenlo incorporando funciones adicionales. La propuesta debe, en lo posible, resolver un problema real de uso, contexto o experiencia.</p>
-        <div class="examples"><span class="example">Mesa</span><span class="example">Silla</span><span class="example">Lámpara</span><span class="example">Mochila</span><span class="example">Botella</span><span class="example">Paraguas</span><span class="example">Taza</span><span class="example">Perchero</span><span class="example">Banco</span><span class="example">Maceta</span><span class="example">Espejo</span><span class="example">Cesto</span></div>
+        <div class="stage-label">Etapa 2 · Propuesta Espacial e Identidad · 15 min</div>
+        <h2>Diseñen el espacio y su objeto clave</h2>
+        <p class="lead">Diseñen la estructura general del espacio y al menos <b>1 objeto o mobiliario clave</b> que lo integre. Definan su forma, dimensiones aproximadas (escala humana) y cómo interactúa la gente en él.</p>
         <div class="timer-row"><div class="timer-wrap"><div class="timer" data-timer>15:00</div><div class="timer-label">Tiempo de etapa</div></div><div class="timer-controls"><button class="micro-btn" data-action="pause">❚❚ Pausa</button><button class="micro-btn finish" data-action="finish">⏭ Finalizar</button><button class="micro-btn" data-action="reset">↺ Reiniciar</button></div></div>
       </div>
-      <aside class="side-card"><div class="side-title">Pistas</div><div class="rules">
-        <div class="rule">No busquen simplemente <b>agregar cosas</b>: detecten qué vale la pena mejorar.</div>
-        <div class="rule">Puede intervenir la ergonomía, el acceso, el guardado, la interacción, la seguridad, el traslado, la organización o el contexto.</div>
-        <div class="rule">La solución tiene que conservar una identidad clara como objeto.</div>
+      <aside class="side-card"><div class="side-title">Qué se pide</div><div class="rules">
+        <div class="rule"><b>Estructura:</b> Forma y envolvente del micro-espacio.</div>
+        <div class="rule"><b>Objeto clave:</b> Asiento, mesa, panel, módulo o equipamiento integrado.</div>
+        <div class="rule"><b>Escala humana:</b> ¿Cómo se sienta, circula o se reúne la gente?</div>
       </div></aside>
     </div>
     <div class="end-message">¡ATENCIÓN!</div>
   </section>
 
+  <!-- TARJETA SORPRESA 1 -->
   <section class="screen surprise-screen" data-index="3" data-kind="card">
     <div class="flip-wrap"><div class="flip-card" id="card1"><div class="card-face card-back"></div><div class="card-face card-front"><div>
-      <span class="tag">Dificultad sorpresa</span><h2>Una función lejana</h2>
-      <p><strong>No descarten lo anterior.</strong> Deberán transformarlo integrando una nueva función que sea lejana a la condición del objeto inicial, pero la propuesta <strong>no puede perder su función ni la solución inicial</strong>.</p>
+      <span class="tag">Dificultad sorpresa 1</span><h2>Transformabilidad o Doble Uso</h2>
+      <p><strong>El espacio u objeto no puede ser estático.</strong> Debe poder transformarse en menos de 2 minutos para cumplir una <strong>segunda función completamente distinta</strong>.</p>
     </div></div></div></div>
   </section>
 
-  <section class="screen stage" data-index="4" data-kind="timed" data-duration="900" data-end="¡ATENCIÓN!">
+  <!-- ETAPA 3 -->
+  <section class="screen stage" data-index="4" data-kind="timed" data-duration="600" data-end="¡ATENCIÓN!">
     <div class="stage-inner">
       <div class="main-card">
-        <div class="stage-label">Etapa 3 · 15 minutos</div>
-        <h2>Integren la nueva función</h2>
-        <p class="lead">Transformen la solución anterior para incorporar la dificultad sorpresa. La nueva función, aunque sea lejana, debe sentirse integrada al objeto y no como un agregado arbitrario.</p>
-        <div class="timer-row"><div class="timer-wrap"><div class="timer" data-timer>15:00</div><div class="timer-label">Tiempo de etapa</div></div><div class="timer-controls"><button class="micro-btn" data-action="pause">❚❚ Pausa</button><button class="micro-btn finish" data-action="finish">⏭ Finalizar</button><button class="micro-btn" data-action="reset">↺ Reiniciar</button></div></div>
+        <div class="stage-label">Etapa 3 · Transformabilidad · 10 min</div>
+        <h2>Integren la doble función</h2>
+        <p class="lead">Adapten la propuesta para incorporar el mecanismo o lógica de transformación. La segunda función debe sentirse natural y responder a otra necesidad del usuario.</p>
+        <div class="timer-row"><div class="timer-wrap"><div class="timer" data-timer>10:00</div><div class="timer-label">Tiempo de etapa</div></div><div class="timer-controls"><button class="micro-btn" data-action="pause">❚❚ Pausa</button><button class="micro-btn finish" data-action="finish">⏭ Finalizar</button><button class="micro-btn" data-action="reset">↺ Reiniciar</button></div></div>
       </div>
       <aside class="side-card"><div class="side-title">Pistas</div><div class="rules">
-        <div class="rule">La dificultad no reemplaza lo anterior: <b>lo obliga a evolucionar</b>.</div>
-        <div class="rule">Busquen una relación inesperada pero defendible entre la función original y la nueva.</div>
-        <div class="rule">Pregúntense: ¿sigue resolviendo el problema inicial?</div>
+        <div class="rule">Piensen en <b>mecanismos simples</b>: pliegues, giro, deslizamiento o encastre modular.</div>
+        <div class="rule">La transformación debe requerir <b>menos de 2 minutos</b>.</div>
+        <div class="rule">No descarten lo anterior: <b>hagan que evolucione</b>.</div>
       </div></aside>
     </div>
     <div class="end-message">¡ATENCIÓN!</div>
   </section>
 
+  <!-- TARJETA SORPRESA 2 -->
   <section class="screen surprise-screen" data-index="5" data-kind="card">
     <div class="flip-wrap"><div class="flip-card" id="card2"><div class="card-face card-back"></div><div class="card-face card-front"><div>
-      <span class="tag">Más dificultad</span><h2>Sustentabilidad integral</h2>
-      <p>Hagan que la solución sea <strong>lo más sustentable posible</strong>. Integren esta condición a todo lo desarrollado: materiales, fabricación, durabilidad, reparación, uso, descarte y/o reutilización.</p>
+      <span class="tag">Dificultad sorpresa 2</span><h2>Sustentabilidad Activa y Materialidad</h2>
+      <p><strong>No alcanza con usar "material reciclado".</strong> El espacio debe <strong>generar su propio recurso</strong> (captación de agua, sombra/ventilación pasiva, energía solar) o estar construido con un sistema <strong>100% desmontable y reutilizable</strong> sin pegamentos ni residuos.</p>
     </div></div></div></div>
   </section>
 
-  <section class="screen stage" data-index="6" data-kind="timed" data-duration="900" data-end="¡ATENCIÓN!">
+  <!-- ETAPA 4 -->
+  <section class="screen stage" data-index="6" data-kind="timed" data-duration="600" data-end="¡ATENCIÓN!">
     <div class="stage-inner">
       <div class="main-card">
-        <div class="stage-label">Etapa 4 · 15 minutos</div>
-        <h2>Hagan la solución lo más sustentable posible</h2>
-        <p class="lead">Integren la sustentabilidad a toda la propuesta anterior. No se trata sólo de cambiar un material: revisen el ciclo completo de la solución.</p>
-        <div class="timer-row"><div class="timer-wrap"><div class="timer" data-timer>15:00</div><div class="timer-label">Tiempo de etapa</div></div><div class="timer-controls"><button class="micro-btn" data-action="pause">❚❚ Pausa</button><button class="micro-btn finish" data-action="finish">⏭ Finalizar</button><button class="micro-btn" data-action="reset">↺ Reiniciar</button></div></div>
+        <div class="stage-label">Etapa 4 · Sustentabilidad Activa · 10 min</div>
+        <h2>Incorporen el criterio sustentable</h2>
+        <p class="lead">Integren la condición ambiental al diseño espacial y material. La solución debe aprovechar el entorno o permitir un ensamblaje limpio y 100% reutilizable.</p>
+        <div class="timer-row"><div class="timer-wrap"><div class="timer" data-timer>10:00</div><div class="timer-label">Tiempo de etapa</div></div><div class="timer-controls"><button class="micro-btn" data-action="pause">❚❚ Pausa</button><button class="micro-btn finish" data-action="finish">⏭ Finalizar</button><button class="micro-btn" data-action="reset">↺ Reiniciar</button></div></div>
       </div>
-      <aside class="side-card"><div class="side-title">Pistas</div><div class="rules">
-        <div class="rule"><b>Materiales:</b> origen, cantidad, reciclabilidad y disponibilidad.</div>
-        <div class="rule"><b>Fabricación:</b> procesos, energía, desperdicio y transporte.</div>
-        <div class="rule"><b>Vida útil:</b> durabilidad, mantenimiento, reparación y actualización.</div>
-        <div class="rule"><b>Después del uso:</b> descarte, desmontaje, reutilización o segunda vida.</div>
+      <aside class="side-card"><div class="side-title">Estrategias posibles</div><div class="rules">
+        <div class="rule"><b>Recursos pasivos:</b> recolectar lluvia, sombra estratégica, ventilación cruzada o paneles solares.</div>
+        <div class="rule"><b>Construcción limpia:</b> ensambles secos, encastres, cero adhesivos o contaminantes.</div>
+        <div class="rule"><b>Ciclo completo:</b> fácil armado, desmontaje y traslado.</div>
       </div></aside>
     </div>
     <div class="end-message">¡ATENCIÓN!</div>
   </section>
 
-  <section class="screen stage" data-index="7" data-kind="timed" data-duration="1200" data-end="¡TIEMPO!">
+  <!-- ETAPA 5 -->
+  <section class="screen stage" data-index="7" data-kind="timed" data-duration="900" data-end="¡TIEMPO!">
     <div class="stage-inner">
       <div class="main-card">
-        <div class="stage-label">Etapa 5 · 20 minutos</div>
+        <div class="stage-label">Etapa Final · Lámina y Prototipo · 15 min</div>
         <h2>Construyan la lámina final</h2>
-        <p class="lead">Preparen una única infografía o lámina digital horizontal <b>16:9 · 1920 × 1080 px</b> que haga visible el proceso completo y la lógica de la solución final integrada en un ambiente. <b>Al finalizar, suban el archivo al Drive del QR.</b></p>
+        <p class="lead">Preparen una única lámina digital horizontal <b>16:9 · 1920 × 1080 px</b> que haga visible la propuesta espacial, la transformación y la sustentabilidad. <b>Al finalizar, suban la lámina al Drive del QR.</b></p>
         <div class="format-badge">▭ Formato horizontal · 1920 × 1080 px</div>
-        <div class="timer-row"><div class="timer-wrap"><div class="timer" data-timer>20:00</div><div class="timer-label">Tiempo de etapa</div></div><div class="timer-controls"><button class="micro-btn" data-action="pause">❚❚ Pausa</button><button class="micro-btn finish" data-action="finish">⏭ Finalizar</button><button class="micro-btn" data-action="reset">↺ Reiniciar</button></div></div>
+        <div class="timer-row"><div class="timer-wrap"><div class="timer" data-timer>15:00</div><div class="timer-label">Tiempo de etapa</div></div><div class="timer-controls"><button class="micro-btn" data-action="pause">❚❚ Pausa</button><button class="micro-btn finish" data-action="finish">⏭ Finalizar</button><button class="micro-btn" data-action="reset">↺ Reiniciar</button></div></div>
       </div>
-      <aside class="side-card"><div class="side-title">La lámina debe mostrar</div><div class="rules">
-        <div class="rule"><b>Solución final</b> integrada en un ambiente o contexto de uso.</div>
-        <div class="rule"><b>Proceso:</b> objeto inicial → primera solución → nueva función → sustentabilidad.</div>
-        <div class="rule">Debe poder entenderse de un vistazo: jerarquía, síntesis y claridad visual.</div>
+      <aside class="side-card"><div class="side-title">La lámina debe contener</div><div class="rules">
+        <div class="rule"><b>1. Render o boceto:</b> el espacio en uso dentro de su contexto.</div>
+        <div class="rule"><b>2. Funcionamiento y objeto clave:</b> explicación clara.</div>
+        <div class="rule"><b>3. Esquema de transformación y sustentabilidad.</b></div>
       </div><div class="qr-box"><div><img src="qr.jpg" alt="QR para subir la lámina al Drive"><div class="qr-caption">Suban aquí la lámina final</div></div></div></aside>
     </div>
     <div class="end-message">¡TIEMPO!</div>
   </section>
 
+  <!-- PITCH -->
   <section class="screen stage pitch waiting" data-index="8" data-kind="pitch" data-duration="60" data-end="SIGUIENTE EQUIPO">
     <div class="stage-inner">
       <div class="main-card">
         <div class="stage-label">Última etapa · 1 minuto por grupo</div>
         <h2>Pitch final</h2>
-        <p class="lead">Elijan a un representante por grupo. Cuando esté listo, presioná <b>Iniciar</b>. Tiene exactamente 1 minuto para presentar la propuesta apoyándose en la lámina final.</p>
+        <p class="lead">Elijan a un representante por equipo. Presioná <b>Iniciar</b> cuando estén listos. Tienen exactamente 1 minuto para presentar su proyecto apoyándose en la lámina.</p>
         <div class="timer-row">
           <div class="timer-wrap"><div class="timer" data-timer>01:00</div><div class="timer-label">Pitch por equipo</div></div>
           <div class="timer-controls">
@@ -229,22 +244,34 @@ h2{font-size:4.25vw;line-height:.95;letter-spacing:-.05em;margin:.5vw 0 1.35vw;f
           </div>
         </div>
       </div>
-      <aside class="side-card"><div class="side-title">En 60 segundos</div><div class="rules">
-        <div class="rule">¿Cuál era el problema?</div><div class="rule">¿Qué solución diseñaron?</div><div class="rule">¿Cómo integraron las dos dificultades?</div><div class="rule">¿Por qué la solución final funciona?</div>
+      <aside class="side-card"><div class="side-title">Estructura en 60s</div><div class="rules">
+        <div class="rule">1. ¿Qué micro-espacio eligieron y para quién es?</div>
+        <div class="rule">2. ¿Cuál es la propuesta espacial y su objeto clave?</div>
+        <div class="rule">3. ¿Cómo se transforma y qué segunda función cumple?</div>
+        <div class="rule">4. ¿Cómo aplicaron la sustentabilidad activa?</div>
       </div></aside>
     </div>
     <div class="end-message">FINALIZAR</div>
   </section>
 
+  <!-- CIERRE -->
   <section class="screen closing" data-index="9" data-kind="closing">
-    <div class="closing-inner"><div class="trophy">🏆</div><div class="stage-label">Cierre · Premiación</div><h2>El jurado está deliberando…</h2><p>En breve conoceremos al equipo ganador del Mini Hackatón de Diseño Integral.</p><div class="deliberando">Buenos Aires + Rosario</div></div>
+    <div class="closing-inner">
+      <div class="trophy">🏆</div>
+      <div class="stage-label">Cierre · Premiación</div>
+      <h2>El jurado está deliberando…</h2>
+      <p>En breve conoceremos a los proyectos ganadores de la Hackatón EXPERIENCIA ARQ-DIS.</p>
+      <div class="deliberando">Arquitectura + Diseño</div>
+    </div>
   </section>
 
+  <!-- NAV -->
   <nav class="nav">
     <div class="nav-left"><span id="screenLabel">Portada</span><div class="dots" id="dots"></div></div>
     <div class="nav-actions"><button class="nav-btn" id="prevBtn">← Anterior</button><button class="nav-btn primary" id="nextBtn">Siguiente →</button></div>
   </nav>
 </div>
+
 <script>
 const screens=[...document.querySelectorAll('.screen')];
 const states=new Map();
@@ -252,7 +279,7 @@ let current=0;
 function fmt(s){s=Math.max(0,Math.floor(s));return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
 screens.forEach((screen,i)=>{const duration=Number(screen.dataset.duration||0);if(duration)states.set(i,{duration,remaining:duration,running:false,interval:null,finished:false,started:false});});
 function renderDots(){const holder=document.getElementById('dots');holder.innerHTML='';screens.forEach((_,i)=>{const d=document.createElement('span');d.className='dot'+(i===current?' active':'');holder.appendChild(d)});}
-function labelFor(i){return ['Portada','Formación de equipos','Rediseño','Dificultad sorpresa','Integración','Más dificultad','Sustentabilidad','Lámina final','Pitch final','Cierre'][i]||'';}
+function labelFor(i){return ['Portada','Formación e Ideación','Propuesta Espacial','Dificultad Sorpresa 1','Transformación','Dificultad Sorpresa 2','Sustentabilidad','Lámina final','Pitch final','Cierre'][i]||'';}
 function updateNav(){
   document.getElementById('prevBtn').disabled=current===0;
   document.getElementById('nextBtn').disabled=current===screens.length-1;
